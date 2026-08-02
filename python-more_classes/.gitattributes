@@ -1,6 +1,0 @@
-git clone <your-repo-url>
-cd alche-higher_level_programming/python-more_classes
-chmod +x 101-nqueens.py
-git add 101-nqueens.py
-git commit -m "fix: make nqueens executable"
-git push
