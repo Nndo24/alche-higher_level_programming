@@ -54,7 +54,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return the printable representation of the rectangle with '#'."""
+        """Return printable representation of rectangle with '#'."""
         if self.__width == 0 or self.__height == 0:
             return ""
         rect = []
@@ -63,8 +63,8 @@ class Rectangle:
         return "\n".join(rect)
 
     def __repr__(self):
-        """Return the string representation to recreate an instance via eval()."""
-        return f"Rectangle({self.__width}, {self.__height})"
+        """Return string representation to recreate instance via eval()."""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """Print a message when an instance of Rectangle is deleted."""
