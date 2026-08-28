@@ -1,0 +1,98 @@
+==============================
+How to use 1-my_list.py
+==============================
+
+This module defines a class MyList that inherits from list.
+
+Importing module:
+    >>> MyList = __import__('1-my_list').MyList
+
+Test present: check instantiation
+    >>> my_list = MyList()
+    >>> isinstance(my_list, MyList)
+    True
+
+Test present: check inherits from list
+    >>> issubclass(MyList, list)
+    True
+
+Test present: check __str__
+    >>> str(my_list)
+    '[]'
+
+Test present: check append()
+    >>> my_list.append(1)
+    >>> str(my_list)
+    '[1]'
+
+Test present: check print_sorted() with sorted append
+    >>> my_list_2 = MyList()
+    >>> my_list_2.append(1)
+    >>> my_list_2.append(2)
+    >>> my_list_2.append(3)
+    >>> my_list_2.print_sorted()
+    [1, 2, 3]
+
+Test present: check print_sorted() with not sorted append
+    >>> my_list_3 = MyList()
+    >>> my_list_3.append(3)
+    >>> my_list_3.append(1)
+    >>> my_list_3.append(2)
+    >>> my_list_3.print_sorted()
+    [1, 2, 3]
+
+Test present: check print_sorted() with no sorted append with negative number
+    >>> my_list_4 = MyList()
+    >>> my_list_4.append(3)
+    >>> my_list_4.append(-1)
+    >>> my_list_4.append(2)
+    >>> my_list_4.append(-5)
+    >>> my_list_4.print_sorted()
+    [-5, -1, 2, 3]
+
+Test present: check print_sorted() with empty list
+    >>> my_list_empty = MyList()
+    >>> my_list_empty.print_sorted()
+    []
+
+Test present: check print_sorted() returns a new list
+    >>> my_list_orig = MyList()
+    >>> my_list_orig.append(4)
+    >>> my_list_orig.append(1)
+    >>> my_list_orig.print_sorted()
+    [1, 4]
+    >>> print(my_list_orig)
+    [4, 1]
+
+Correct output - case: class creation
+    >>> c1 = MyList()
+
+Correct output - case: class creation and regular print
+    >>> c2 = MyList()
+    >>> print(c2)
+    []
+
+Correct output - case: class creation, append and regular print
+    >>> c3 = MyList()
+    >>> c3.append(1)
+    >>> print(c3)
+    [1]
+
+Correct output - case: class creation, append, regular print and sorted print
+    >>> c4 = MyList()
+    >>> c4.append(2)
+    >>> print(c4)
+    [2]
+    >>> c4.print_sorted()
+    [2]
+
+Correct output - case: class creation, multiple appends, regular print and sorted print
+    >>> c5 = MyList()
+    >>> c5.append(1)
+    >>> c5.append(4)
+    >>> c5.append(2)
+    >>> c5.append(3)
+    >>> print(c5)
+    [1, 4, 2, 3]
+    >>> c5.print_sorted()
+    [1, 2, 3, 4]
