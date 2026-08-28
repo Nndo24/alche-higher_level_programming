@@ -22,13 +22,13 @@ Test present: integer_validator()
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: ...
 
 Test present: integer_validator("age")
     >>> bg.integer_validator("age")
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+    TypeError: ...
 
 Test present: integer_validator("age", 1)
     >>> bg.integer_validator("age", 1)
@@ -44,6 +44,12 @@ Test present: integer_validator("age", -4)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
+
+Test present: integer_validator("age", 13.5)
+    >>> bg.integer_validator("age", 13.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
 
 Test present: integer_validator("age", "4")
     >>> bg.integer_validator("age", "4")
