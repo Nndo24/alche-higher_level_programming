@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Sends a request to a URL and handles HTTP error status codes with requests."""
-import sys
+"""Sends a request to a URL and displays the body of the response."""
 import requests
+import sys
 
 
 if __name__ == "__main__":
