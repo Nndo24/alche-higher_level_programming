@@ -1,0 +1,61 @@
+==================================
+How to use 5-text_indentation.py
+==================================
+
+This module defines a function ``text_indentation(text)``.
+
+Usage
+=====
+
+Importing the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Formatting text with special characters:
+    >>> text_indentation("Hello. How are you? Fine: thanks.")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    thanks.
+    <BLANKLINE>
+
+Trimming leading spaces after delimiters:
+    >>> text_indentation("   Hello world.   Next sentence?   Done.")
+    Hello world.
+    <BLANKLINE>
+    Next sentence?
+    <BLANKLINE>
+    Done.
+    <BLANKLINE>
+
+Type Errors
+===========
+
+Passing integer instead of string:
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Passing None:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Passing a list:
+    >>> text_indentation(["Hello"])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Missing Arguments
+=================
+
+Missing text argument:
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
