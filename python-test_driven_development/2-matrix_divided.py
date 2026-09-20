@@ -30,7 +30,8 @@ def matrix_divided(matrix, div):
         if not isinstance(row, list) or len(row) == 0:
             raise TypeError(msg)
         for element in row:
-            if not isinstance(element, (int, float)) or isinstance(element, bool):
+            if not isinstance(element, (int, float)) or \
+               isinstance(element, bool):
                 raise TypeError(msg)
 
     row_len = len(matrix[0])
