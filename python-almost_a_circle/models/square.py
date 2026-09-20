@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """
-    Square class that represents a square shape.
+    Square class that inherits from Rectangle.
     """
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -32,7 +32,7 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     def update(self, *args, **kwargs):
-        """Updates attributes of Square."""
+        """Updates attributes of Square using *args and **kwargs."""
         attrs = ["id", "size", "x", "y"]
         if args and len(args) > 0:
             for i, arg in enumerate(args):
